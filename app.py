@@ -18,14 +18,14 @@ st.set_page_config(
 # Function to load models
 @st.cache_resource
 def load_models():
-    with open(".\\Model\\model_rf.pkl", "rb") as f:
+    with open(".//Model//model_rf.pkl", "rb") as f:
         rf_model = pickle.load(f)
     return rf_model
 
 # Function to load datasets
 @st.cache_data
 def load_data():
-    return pd.read_csv(".\\Datasets\\train.csv")
+    return pd.read_csv(".//Datasets//train.csv")
 
 #load models and data
 try:
@@ -72,7 +72,7 @@ if page == "Home":
         """)
     
     with col2:
-        st.image(".\\Media\\Property_Finance_Condo_Loan_sts_1372683893.jpg")
+        st.image(".//Media//Property_Finance_Condo_Loan_sts_1372683893.jpg")
         st.write("""
         1. **Data Exploration**: View and analyze the datasets used for model training.
         2. **Price Prediction**: Input User's data and get House Loan Prediction.
