@@ -19,7 +19,7 @@ st.set_page_config(
 # Function to load models
 @st.cache_resource
 def load_models():
-    with open(".//Model//model_logReg.pkl", "rb") as f:
+    with open(".//Model//model_logRegV2.pkl", "rb") as f:
         rf_model = pickle.load(f)
     return rf_model
 
