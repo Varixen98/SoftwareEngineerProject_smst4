@@ -19,7 +19,7 @@ st.set_page_config(
 # Function to load models
 @st.cache_resource
 def load_models():
-    with open(".//Model//model_logRegV2.pkl", "rb") as f:
+    with open(".//Model//model_rfV2.pkl", "rb") as f:
         rf_model = pickle.load(f)
     return rf_model
 
@@ -69,7 +69,7 @@ if page == "Home":
             - Credit History: 0.0 || 1.0  
             - Property Area: Urban, Semiurban, Rural                   
 
-            This app uses Logistic Regression machine learning model.
+            This app uses Random Forest machine learning model.
         """)
     
     with col2:
@@ -185,7 +185,7 @@ elif page == "Loan Status Prediction":
         'Feature': ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
        'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
        'Loan_Amount_Term', 'Credit_History', 'Property_Area'],
-       'Importance': rf_model.coef_[0]
+       'Importance': rf_model.feature_importances_
     }).sort_values('Importance', ascending=True)
 
     fig, ax= plt.subplots(figsize=(12,6))
