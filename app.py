@@ -18,7 +18,7 @@ st.set_page_config(
 # Function to load models
 @st.cache_resource
 def load_models():
-    with open(".//Model//model_rf.pkl", "rb") as f:
+    with open(".//Model//model_logReg.pkl", "rb") as f:
         rf_model = pickle.load(f)
     return rf_model
 
@@ -68,7 +68,7 @@ if page == "Home":
             - Credit History: 0.0 || 1.0  
             - Property Area: Urban, Semiurban, Rural                   
 
-            This app uses random forest machine learning model.
+            This app uses Logistic Regression machine learning model.
         """)
     
     with col2:
