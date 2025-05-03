@@ -55,7 +55,6 @@ page = st.sidebar.radio('Select Page: ', ['Home', 'Data Exploration', 'Loan Stat
 
 # Home Page
 if page == "Home":
-    st.header("Welcome to House Loan Approval Prediction App")
 
     col1, col2 = st.columns(2)
 
