@@ -185,7 +185,7 @@ elif page == "Loan Status Prediction":
         'Feature': ['Gender', 'Married', 'Dependents', 'Education', 'Self_Employed',
        'ApplicantIncome', 'CoapplicantIncome', 'LoanAmount',
        'Loan_Amount_Term', 'Credit_History', 'Property_Area'],
-       'Importance': rf_model.feature_importances_
+       'Importance': rf_model.coef_[0]
     }).sort_values('Importance', ascending=True)
 
     fig, ax= plt.subplots(figsize=(12,6))
