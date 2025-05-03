@@ -149,7 +149,7 @@ elif page == "Loan Status Prediction":
         Education = st.selectbox('Education:', ['Graduate', 'Not Graduate'])
         Self_Employed = st.selectbox("Self Employed:", ['Yes', 'No'])
         Credit_History = st.selectbox('Credit History:', [0.0, 1.0])
-        Property_Area = st.selectbox("Property Area:", ['Rural', 'Urban', 'Semiurban'])
+        Property_Area = st.selectbox("Property(House) Area:", ['Rural', 'Urban', 'Semiurban'])
 
     with col2:
         st.subheader('Numerical Features')
@@ -157,7 +157,7 @@ elif page == "Loan Status Prediction":
         ApplicantIncome = st.number_input('Applicant Income:', value=1000.0)
         CoapplicantIncome = st.number_input("Coapplicant Income:", value=1000.0)
         LoanAmount = st.number_input('Loan Amount (x1000):', value=100.0)
-        Loan_Amount_Term = st.number_input('Loan Amount Term:', value=360)
+        Loan_Amount_Term = st.number_input('Loan Amount Term(Month):', value=360)
 
     
     # Create Feature array
