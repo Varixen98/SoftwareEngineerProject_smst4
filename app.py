@@ -48,7 +48,6 @@ except Exception as e:
 
 # Main Title 
 st.title("🏦 House Loan Approval Prediction App")
-st.write("This application predicts wether the users are eligible for a house loan!")
 
 # Sidebar
 st.sidebar.header("Navigation")
@@ -63,7 +62,7 @@ if page == "Home":
     with col1:
         st.write("""
             ### About the App
-            This app helps predict the eligibility of house loan
+            This app predicts the user's eligibility to apply house loan
             based on the following factors:
                  
             - Gender: Female || Male  
