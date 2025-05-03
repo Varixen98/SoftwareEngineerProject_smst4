@@ -4,6 +4,7 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
+from sklearn.preprocessing import StandardScaler
 
 # Kalo mau run website
 # streamlit run "d:/Data Adji/Binus/Semester 4/Software Engineer/Coding/app.py"
@@ -164,11 +165,14 @@ elif page == "Loan Status Prediction":
     features = np.array([[gender_map[Gender], married_map[Married], dependents_map[Dependents], education_map[Education],
        self_employed_map[Self_Employed], ApplicantIncome, CoapplicantIncome, LoanAmount,
        Loan_Amount_Term, Credit_History,property_area_map[Property_Area]]])
-    
+
+    # scaled the features
+    encoder = StandardScaler()
+    scaled_features = encoder.fit_transform(features)
 
     if st.button("Predict House Loan Status"):
         
-        prediction = rf_model.predict(features)[0]
+        prediction = rf_model.predict(scaled_features)[0]
         label_prediction = {1:'Yes', 0:'No'}
         # Display prediction
         st.success(f"Predicted House Loan Approval: {label_prediction.get(prediction)}")
