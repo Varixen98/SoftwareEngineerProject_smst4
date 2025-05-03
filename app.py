@@ -23,6 +23,13 @@ def load_models():
         rf_model = pickle.load(f)
     return rf_model
 
+# Function to load scalers
+@st.cache_resource
+def load_scalers():
+    with open('.//Model//scaler.pkl','rb') as f:
+        scaler_model = pickle.load(f)
+    return scaler_model
+    
 # Function to load datasets
 @st.cache_data
 def load_data():
@@ -167,8 +174,7 @@ elif page == "Loan Status Prediction":
        Loan_Amount_Term, Credit_History,property_area_map[Property_Area]]])
 
     # scaled the features
-    encoder = StandardScaler()
-    scaled_features = encoder.fit_transform(features)
+    scaled_features = scaler_model.fit_transform(features)
 
     if st.button("Predict House Loan Status"):
         
