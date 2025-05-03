@@ -38,6 +38,7 @@ def load_data():
 #load models and data
 try:
     rf_model = load_models()
+    scaler_model = load_scalers()
     df = load_data()
     models_loaded = True
 except Exception as e:
