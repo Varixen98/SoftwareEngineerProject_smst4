@@ -39,7 +39,7 @@ except Exception as e:
 
 # Main Title 
 st.title("🏦 House Loan Approval Prediction App")
-st.write("This application predicts the user wether the users are eligible for a home loan!")
+st.write("This application predicts wether the users are eligible for a house loan!")
 
 # Sidebar
 st.sidebar.header("Navigation")
