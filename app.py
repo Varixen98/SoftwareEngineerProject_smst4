@@ -157,7 +157,7 @@ elif page == "Loan Status Prediction":
         ApplicantIncome = st.number_input('Applicant Income:', value=1000.0)
         CoapplicantIncome = st.number_input("Coapplicant Income:", value=1000.0)
         LoanAmount = st.number_input('Loan Amount (x1000):', value=100.0)
-        Loan_Amount_Term = st.slider('Loan Amount Term:', min_value=0, max_value=480, value=360, step=2)
+        Loan_Amount_Term = st.number_input('Loan Amount Term:', value=360)
 
     
     # Create Feature array
