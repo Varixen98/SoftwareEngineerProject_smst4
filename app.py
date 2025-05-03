@@ -174,7 +174,7 @@ elif page == "Loan Status Prediction":
        Loan_Amount_Term, Credit_History,property_area_map[Property_Area]]])
 
     # scaled the features
-    scaled_features = scaler_model.fit_transform(features)
+    scaled_features = scaler_model.transform(features)
 
     if st.button("Predict House Loan Status"):
         
