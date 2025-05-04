@@ -78,7 +78,7 @@ if page == "Home":
         """)
     
     with col2:
-        st.image(".//Media//Property_Finance_Condo_Loan_sts_1372683893.jpg", use_column_width=True)
+        st.image(".//Media//Property_Finance_Condo_Loan_sts_1372683893.jpg", use_container_width=True)
     st.write("""
     ### How to use the App
     1. **Data Exploration**: View and analyze the datasets used for model training.
