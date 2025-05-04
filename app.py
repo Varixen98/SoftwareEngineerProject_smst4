@@ -4,10 +4,9 @@ import numpy as np
 import pickle
 import matplotlib.pyplot as plt
 import seaborn as sns
-from sklearn.preprocessing import StandardScaler
 
-# Kalo mau run website
-# streamlit run "d:/Data Adji/Binus/Semester 4/Software Engineer/Coding/app.py"
+# Kalo mau run website di vscode
+# ketik di terminal: streamlit run app.py
 
 # Set Page config
 st.set_page_config(
@@ -80,12 +79,13 @@ if page == "Home":
     
     with col2:
         st.image(".//Media//Property_Finance_Condo_Loan_sts_1372683893.jpg")
-        st.write("""
-        1. **Data Exploration**: View and analyze the datasets used for model training.
-        2. **Price Prediction**: Input User's data and get House Loan Prediction.
+    st.write("""
+    ### How to use the App
+    1. **Data Exploration**: View and analyze the datasets used for model training.
+    2. **Price Prediction**: Input User's data and get House Loan Prediction.
 
-        use the sidebar on the left to navigate between pages. 
-        """)
+    use the sidebar on the left to navigate between pages. 
+    """)
 
 
 # Data Exploration page
