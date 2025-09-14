@@ -1,0 +1,155 @@
+/* css/rating-page.css */
+
+#place-rating-detail .page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between; /* Untuk mengakomodasi tombol kembali */
+}
+
+#place-rating-detail .rating-card-detail {
+  background-color: var(--card-bg, #ffffff);
+  border-radius: var(--border-radius, 8px);
+  box-shadow: var(--shadow, 0 4px 12px rgba(0,0,0,0.1));
+  padding: 25px;
+  max-width: 700px; /* Batasi lebar form agar lebih fokus */
+  margin: 20px auto; /* Pusatkan card */
+}
+
+#place-rating-detail .card-header h2 {
+  color: var(--text-color-dark, #333);
+  margin-bottom: 20px;
+  font-size: 1.8em;
+  border-bottom: 1px solid var(--border-color, #eee);
+  padding-bottom: 10px;
+}
+
+#place-rating-detail .rating-detail-content p {
+  margin-bottom: 25px;
+  color: var(--text-color-light, #555);
+  font-size: 1em;
+}
+
+#place-rating-detail .rating-aspect {
+  margin-bottom: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#place-rating-detail .rating-aspect label {
+  font-weight: 600;
+  color: var(--text-color, #444);
+  font-size: 1.1em;
+}
+
+#place-rating-detail .stars {
+  display: flex;
+  gap: 8px; /* Sedikit lebih lebar antar bintang */
+  font-size: 2em; /* Bintang lebih besar */
+  align-items: center;
+}
+
+#place-rating-detail .stars i {
+  color: #e0e0e0; /* Warna bintang kosong yang lebih lembut */
+  cursor: pointer;
+  transition: color 0.2s ease-in-out, transform 0.1s ease-in-out;
+}
+#place-rating-detail .stars i:hover {
+  transform: scale(1.1); /* Efek hover pada bintang */
+}
+
+#place-rating-detail .stars i.selected,
+#place-rating-detail .stars i.highlighted {
+  color: #ffc107; /* Warna emas untuk bintang terpilih/hover */
+}
+
+
+#place-rating-detail .form-group {
+  margin-bottom: 25px;
+}
+
+#place-rating-detail .form-group label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: var(--text-color, #444);
+  font-size: 1.1em;
+}
+
+#place-rating-detail .form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid var(--border-color, #ccc);
+  border-radius: var(--border-radius, 8px);
+  min-height: 100px;
+  font-family: inherit;
+  font-size: 1em;
+  color: var(--text-color, #333);
+  background-color: var(--background-color, #f9f9f9);
+  box-sizing: border-box; /* Pastikan padding tidak menambah lebar total */
+}
+#place-rating-detail .form-group textarea:focus {
+  border-color: var(--primary-color, #007bff);
+  box-shadow: 0 0 0 0.2rem rgba(0,123,255,.25);
+}
+
+#place-rating-detail .form-submit {
+  display: flex;
+  gap: 15px;
+  margin-top: 30px;
+  justify-content: flex-end; /* Ratakan tombol ke kanan */
+}
+
+#place-rating-detail .form-submit .btn {
+    padding: 12px 25px; /* Padding lebih besar */
+    border-radius: var(--border-radius, 8px);
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 1em;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+    border: none;
+}
+#place-rating-detail .form-submit .btn:hover {
+    transform: translateY(-2px); /* Efek angkat sedikit saat hover */
+}
+
+#place-rating-detail .form-submit .btn.primary {
+    background-color: var(--primary-color, #007bff);
+    color: white;
+}
+#place-rating-detail .form-submit .btn.primary:hover {
+    background-color: var(--primary-color-dark, #0056b3);
+}
+
+#place-rating-detail .form-submit .btn.outline {
+    background-color: transparent;
+    color: var(--secondary-color, #6c757d);
+    border: 2px solid var(--secondary-color, #6c757d);
+}
+#place-rating-detail .form-submit .btn.outline:hover {
+    background-color: var(--secondary-color, #6c757d);
+    color: white;
+}
+
+/* Variabel CSS untuk status message (jika belum ada) */
+:root {
+    --success-bg: #d4edda;
+    --success-text: #155724;
+    --error-bg: #f8d7da;
+    --error-text: #721c24;
+}
+
+#ratingSubmissionStatus {
+    text-align: center;
+    font-weight: 500;
+}
+#ratingSubmissionStatus.success {
+    background-color: var(--success-bg);
+    color: var(--success-text);
+    border: 1px solid var(--success-text);
+}
+#ratingSubmissionStatus.error {
+    background-color: var(--error-bg);
+    color: var(--error-text);
+    border: 1px solid var(--error-text);
+}

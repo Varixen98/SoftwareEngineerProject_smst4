@@ -1,0 +1,219 @@
+/* Login Page Specific Styles */
+.login-container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, var(--primary-900), var(--primary-700));
+  padding: var(--space-4);
+}
+
+.login-card {
+  background-color: white;
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-xl);
+  width: 100%;
+  max-width: 400px;
+  padding: var(--space-8);
+  animation: slideInUp 0.5s ease;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: var(--space-6);
+}
+
+.login-header .logo {
+  display: inline-flex;
+  margin-bottom: var(--space-4);
+}
+
+.login-header .logo i {
+  font-size: 2rem;
+}
+
+.login-header h1 {
+  color: var(--primary-900);
+  font-size: 1.75rem;
+  margin-bottom: var(--space-2);
+}
+
+.login-header p {
+  color: var(--neutral-600);
+  font-size: 0.875rem;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-2);
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--neutral-700);
+}
+
+.form-group input {
+  padding: var(--space-3);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: 1rem;
+  transition: all var(--transition-fast);
+}
+
+.form-group input:focus {
+  border-color: var(--primary-400);
+  box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.25);
+  outline: none;
+}
+
+.form-group input:hover {
+  border-color: var(--primary-300);
+}
+
+.password-group {
+  position: relative;
+}
+
+.password-toggle {
+  position: absolute;
+  right: var(--space-3);
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: var(--neutral-500);
+  cursor: pointer;
+  transition: color var(--transition-fast);
+}
+
+.password-toggle:hover {
+  color: var(--neutral-700);
+}
+
+.remember-forgot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.875rem;
+}
+
+.remember-me {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.remember-me input[type="checkbox"] {
+  width: 1rem;
+  height: 1rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--neutral-300);
+  transition: all var(--transition-fast);
+}
+
+.remember-me input[type="checkbox"]:checked {
+  background-color: var(--primary-600);
+  border-color: var(--primary-600);
+}
+
+.forgot-password {
+  color: var(--primary-600);
+  text-decoration: none;
+  transition: color var(--transition-fast);
+}
+
+.forgot-password:hover {
+  color: var(--primary-800);
+}
+
+.login-btn {
+  width: 100%;
+  padding: var(--space-3);
+  background-color: var(--primary-600);
+  color: white;
+  border: none;
+  border-radius: var(--radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.login-btn:hover {
+  background-color: var(--primary-700);
+  transform: translateY(-1px);
+}
+
+.login-btn:active {
+  transform: translateY(0);
+}
+
+.login-divider {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+  margin: var(--space-6) 0;
+  color: var(--neutral-500);
+}
+
+.login-divider::before,
+.login-divider::after {
+  content: "";
+  flex: 1;
+  height: 1px;
+  background-color: var(--neutral-200);
+}
+
+.signup-prompt {
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+.signup-link {
+  color: var(--primary-600);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color var(--transition-fast);
+}
+
+.signup-link:hover {
+  color: var(--primary-800);
+}
+
+.error-message {
+  background-color: var(--error-50);
+  color: var(--error-700);
+  padding: var(--space-3);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-4);
+}
+
+.error-message i {
+  color: var(--error-500);
+}
+
+@media (max-width: 480px) {
+  .login-card {
+    padding: var(--space-6) var(--space-4);
+  }
+  
+  .login-header .logo i {
+    font-size: 1.75rem;
+  }
+  
+  .login-header h1 {
+    font-size: 1.5rem;
+  }
+}

@@ -1,0 +1,210 @@
+/* Data Exploration Page Specific Styles */
+
+/* Data Table Card */
+.data-card {
+  margin-bottom: var(--space-6);
+  overflow: hidden;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-4);
+}
+
+.controls {
+  display: flex;
+  gap: var(--space-2);
+}
+
+.controls input, .controls select {
+  padding: var(--space-2);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+}
+
+.table-container {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.875rem;
+}
+
+thead {
+  background-color: var(--primary-50);
+}
+
+th {
+  padding: var(--space-3);
+  text-align: left;
+  font-weight: 600;
+  border-bottom: 2px solid var(--primary-200);
+  position: sticky;
+  top: 0;
+  background-color: var(--primary-50);
+  z-index: 10;
+}
+
+td {
+  padding: var(--space-3);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+tbody tr:hover {
+  background-color: var(--neutral-100);
+}
+
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: var(--space-3);
+  background-color: var(--neutral-50);
+  border-top: 1px solid var(--neutral-200);
+}
+
+.btn-page {
+  padding: var(--space-1) var(--space-3);
+  background-color: var(--neutral-100);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  font-size: 0.875rem;
+  transition: all var(--transition-fast);
+}
+
+.btn-page:hover:not([disabled]) {
+  background-color: var(--primary-50);
+  border-color: var(--primary-300);
+}
+
+.btn-page[disabled] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.page-info {
+  font-size: 0.875rem;
+  color: var(--neutral-600);
+}
+
+/* Stats Card */
+.stats-card {
+  margin-bottom: var(--space-6);
+}
+
+.stats-table {
+  width: 100%;
+  font-size: 0.875rem;
+}
+
+.tabs {
+  display: flex;
+  gap: var(--space-1);
+  margin-bottom: var(--space-4);
+  border-bottom: 1px solid var(--neutral-200);
+}
+
+.tab-btn {
+  padding: var(--space-2) var(--space-4);
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  font-weight: 500;
+  color: var(--neutral-600);
+  transition: all var(--transition-fast);
+}
+
+.tab-btn:hover {
+  color: var(--primary-700);
+}
+
+.tab-btn.active {
+  color: var(--primary-700);
+  border-bottom: 2px solid var(--primary-500);
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.chart-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  margin-bottom: var(--space-4);
+}
+
+.chart-controls label {
+  font-weight: 500;
+}
+
+.chart-controls select {
+  padding: var(--space-2);
+  border: 1px solid var(--neutral-300);
+  border-radius: var(--radius-md);
+  min-width: 180px;
+}
+
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+/* Outlier Card */
+.outlier-card {
+  margin-bottom: var(--space-6);
+}
+
+/* Responsive Styles for Exploration */
+@media (max-width: 768px) {
+  .chart-controls {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .chart-controls select {
+    width: 100%;
+  }
+  
+  .chart-container {
+    height: 250px;
+  }
+}
+
+@media (max-width: 480px) {
+  .tabs {
+    flex-wrap: wrap;
+  }
+  
+  .tab-btn {
+    flex: 1;
+    text-align: center;
+    font-size: 0.875rem;
+    padding: var(--space-2);
+  }
+  
+  .card-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: var(--space-2);
+  }
+  
+  .controls {
+    width: 100%;
+  }
+  
+  .controls input, .controls select {
+    flex: 1;
+  }
+}
